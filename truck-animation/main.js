@@ -30,8 +30,11 @@ window.onload = function()
   //MinetecLocations
 	canvas = document.getElementById("canvas");
 	context = canvas.getContext("2d");
-	car = new Image();
-    car.src="myimage.png";
+	loaderImg = new Image();
+    loaderImg.src="r1700_cat_sml.png";
+
+	map = new Image();
+    map.src="map_locations.png";
 
     window.addEventListener("keydown", keypress_handler, false);
     window.addEventListener("keyup", keyup_handler, false);
@@ -68,10 +71,6 @@ function locations(canvas, context) {
 function draw()
 {
 	context = canvas.getContext("2d");
-	//context.clearRect(0, 0, 800, 800);
-
-	context.fillStyle = "rgb(200, 100, 220)";
-	context.fillRect(50, 50, 100, 100);
 
 	x += (speed*mod) * Math.cos(Math.PI/180 * angle);
 	y += (speed*mod) * Math.sin(Math.PI/180 * angle);
@@ -79,7 +78,8 @@ function draw()
 	context.save();
 	context.translate(x, y);
 	context.rotate(Math.PI/180 * angle);
-	context.drawImage(car, -(car.width/2), -(car.height/2));	
+	context.drawImage(loaderImg, 100, 100);
+	//context.drawImage(map, -100, -300);
 	context.restore();
 }
 
