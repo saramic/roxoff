@@ -14,16 +14,35 @@ window.onload = function()
     window.addEventListener("keydown", keypress_handler, false);
     window.addEventListener("keyup", keyup_handler, false);
 
+  locations(canvas, context);
 	var move = setInterval(function()
 	{
 		draw();
 	}, 30);
 };
 
+function dot(context, x, y) {
+  context.rect(x, y, 2, 2);
+           context.fillStyle = "black";
+           context.fill();
+}
+
+function locations(canvas, context) {
+  canvas.width
+  canvas.height
+  //MinetecLocations
+  Object.keys(MinetecLocations).forEach(function(x) {
+    y = (MinetecLocations[x]['Northing'] - 21000)/1;
+    x = (MinetecLocations[x]['Easting'] - 15000)/1;
+    console.log(parseInt(x), parseInt(y));
+    dot(context, parseInt(x), parseInt(y));
+  });
+}
+
 function draw()
 {
 	context = canvas.getContext("2d");
-	context.clearRect(0, 0, 800, 800);
+	//context.clearRect(0, 0, 800, 800);
 
 	context.fillStyle = "rgb(200, 100, 220)";
 	context.fillRect(50, 50, 100, 100);
