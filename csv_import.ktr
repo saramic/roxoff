@@ -107,6 +107,12 @@
   <hop> <from>LHDBucketData CSV INPUT</from><to>LHDBucketData SQL INPUT</to><enabled>Y</enabled> </hop>
   <hop> <from>LHDIMUData</from><to>LHDIMUData Insert&#x2f;Update</to><enabled>Y</enabled> </hop>
   <hop> <from>Get  LHDIMUData csvs</from><to>LHDIMUData</to><enabled>Y</enabled> </hop>
+  <hop> <from>LHDHydraulicData CSV INPUT</from><to>LHDHydraulicData Insert&#x2f;Update 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get  LHDHydraulicData csvs 2</from><to>LHDHydraulicData CSV INPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get  LHDMinetecRangeData</from><to>LHDHydraulicData CSV INPUT 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>LHDHydraulicData CSV INPUT 2</from><to>LHDMinetecRangeData Insert&#x2f;Update</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get  LHDMachineData 2</from><to>LHDMachineData CSV INPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>LHDMachineData CSV INPUT</from><to>LHDMachineData Insert&#x2f;Update</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>GET LHDBucketData</name>
@@ -190,8 +196,8 @@
     </file>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>368</xloc>
-      <yloc>32</yloc>
+      <xloc>208</xloc>
+      <yloc>0</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -988,7 +994,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>480</xloc>
+      <xloc>352</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
       </GUI>
@@ -1520,8 +1526,1681 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>560</xloc>
+      <xloc>480</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDHydraulicData CSV INPUT</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016&#x2f;2016.11.11&#x2f;RCM00001&#x2f;16.36.06_Complete_Log&#x2f;LHDHydraulicData1162881383.csv</filename>
+    <filename_field>filename</filename_field>
+    <rownum_field/>
+    <include_filename>Y</include_filename>
+    <separator>,</separator>
+    <enclosure>&#x22;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>OriginationTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>TransmissionTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>txSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggerSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggedTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Left STIC Pilot Sensor Health</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Left STIC Pilot Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Right STIC Pilot Sensor Health</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Right STIC Pilot Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Left Head &#x2f; Right Rod Sensor Health</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Left Head &#x2f; Right Rod Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Right Head &#x2f; Left Rod Sensor Health</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Right Head &#x2f; Left Rod Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDHydraulicData Insert&#x2f;Update 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>loaders</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>LHDHydraulicData</table>
+      <key>
+        <name>OriginationTime</name>
+        <field>OriginationTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>TransmissionTime</name>
+        <field>TransmissionTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>txSequenceNumber</name>
+        <field>txSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggerSequenceNumber</name>
+        <field>loggerSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggedTime</name>
+        <field>loggedTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Left STIC Pilot Sensor Health</name>
+        <field>Left STIC Pilot Sensor Health</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Left STIC Pilot Pressure &#x28;kPa&#x29;</name>
+        <field>Left STIC Pilot Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Right STIC Pilot Sensor Health</name>
+        <field>Right STIC Pilot Sensor Health</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Right STIC Pilot Pressure &#x28;kPa&#x29;</name>
+        <field>Right STIC Pilot Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Left Head &#x2f; Right Rod Sensor Health</name>
+        <field>Left Head &#x2f; Right Rod Sensor Health</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Left Head &#x2f; Right Rod Pressure &#x28;kPa&#x29;</name>
+        <field>Left Head &#x2f; Right Rod Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Right Head &#x2f; Left Rod Sensor Health</name>
+        <field>Right Head &#x2f; Left Rod Sensor Health</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Right Head &#x2f; Left Rod Pressure &#x28;kPa&#x29;</name>
+        <field>Right Head &#x2f; Left Rod Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>filename</name>
+        <field>filename</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>OriginationTime</name>
+        <rename>OriginationTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TransmissionTime</name>
+        <rename>TransmissionTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>txSequenceNumber</name>
+        <rename>txSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggerSequenceNumber</name>
+        <rename>loggerSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggedTime</name>
+        <rename>loggedTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Left STIC Pilot Sensor Health</name>
+        <rename>Left STIC Pilot Sensor Health</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Left STIC Pilot Pressure &#x28;kPa&#x29;</name>
+        <rename>Left STIC Pilot Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Right STIC Pilot Sensor Health</name>
+        <rename>Right STIC Pilot Sensor Health</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Right STIC Pilot Pressure &#x28;kPa&#x29;</name>
+        <rename>Right STIC Pilot Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Left Head &#x2f; Right Rod Sensor Health</name>
+        <rename>Left Head &#x2f; Right Rod Sensor Health</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Left Head &#x2f; Right Rod Pressure &#x28;kPa&#x29;</name>
+        <rename>Left Head &#x2f; Right Rod Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Right Head &#x2f; Left Rod Sensor Health</name>
+        <rename>Right Head &#x2f; Left Rod Sensor Health</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Right Head &#x2f; Left Rod Pressure &#x28;kPa&#x29;</name>
+        <rename>Right Head &#x2f; Left Rod Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>filename</name>
+        <rename>filename</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
       <yloc>272</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get  LHDHydraulicData csvs 2</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum>N</rownum>
+    <isaddresult>Y</isaddresult>
+    <filefield>N</filefield>
+    <rownum_field/>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;</name>
+      <filemask>.&#x2a;LHDHydraulicData.&#x2a;</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>Y</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>0</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get  LHDMinetecRangeData</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum>N</rownum>
+    <isaddresult>Y</isaddresult>
+    <filefield>N</filefield>
+    <rownum_field/>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;</name>
+      <filemask>.&#x2a;LHDMinetecRangeData.&#x2a;</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>Y</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>592</xloc>
+      <yloc>0</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDHydraulicData CSV INPUT 2</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016&#x2f;2016.11.11&#x2f;RCM00001&#x2f;16.36.06_Complete_Log&#x2f;LHDMinetecRangeData1162881383.csv</filename>
+    <filename_field>filename</filename_field>
+    <rownum_field/>
+    <include_filename>Y</include_filename>
+    <separator>,</separator>
+    <enclosure>&#x22;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>OriginationTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>TransmissionTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>txSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggerSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggedTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Tag 1 ID</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Tag 2 ID</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Range &#x28;cm&#x3f;&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Type</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>688</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDMinetecRangeData Insert&#x2f;Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>loaders</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>LHDMinetecRangeData</table>
+      <key>
+        <name>OriginationTime</name>
+        <field>OriginationTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>TransmissionTime</name>
+        <field>TransmissionTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>txSequenceNumber</name>
+        <field>txSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggerSequenceNumber</name>
+        <field>loggerSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggedTime</name>
+        <field>loggedTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Tag 1 ID</name>
+        <field>Tag 1 ID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Tag 2 ID</name>
+        <field>Tag 2 ID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Range &#x28;cm&#x3f;&#x29;</name>
+        <field>Range &#x28;cm&#x3f;&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Type</name>
+        <field>Type</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>filename</name>
+        <field>filename</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>OriginationTime</name>
+        <rename>OriginationTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TransmissionTime</name>
+        <rename>TransmissionTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>txSequenceNumber</name>
+        <rename>txSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggerSequenceNumber</name>
+        <rename>loggerSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggedTime</name>
+        <rename>loggedTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Tag 1 ID</name>
+        <rename>Tag 1 ID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Tag 2 ID</name>
+        <rename>Tag 2 ID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Range &#x28;cm&#x3f;&#x29;</name>
+        <rename>Range &#x28;cm&#x3f;&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Type</name>
+        <rename>Type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>filename</name>
+        <rename>filename</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>784</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get  LHDMachineData 2</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum>N</rownum>
+    <isaddresult>Y</isaddresult>
+    <filefield>N</filefield>
+    <rownum_field/>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;</name>
+      <filemask>.&#x2a;LHDMachineData.&#x2a;</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>Y</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>816</xloc>
+      <yloc>0</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDMachineData CSV INPUT</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016&#x2f;2016.11.11&#x2f;RCM00001&#x2f;16.36.06_Complete_Log&#x2f;LHDMachineData1162881383.csv</filename>
+    <filename_field>filename</filename_field>
+    <rownum_field/>
+    <include_filename>Y</include_filename>
+    <separator>,</separator>
+    <enclosure>&#x22;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>Y</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>OriginationTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>TransmissionTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>txSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggerSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggedTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>CDL Connection Health</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Throttle Position &#x28;&#x25;&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Engine Speed &#x28;rpm&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Desired Engine Speed &#x28;rpm&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Boost Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Engine Load Factor &#x28;&#x25;&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Fuel Consumption Rate &#x28;l&#x2f;h&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Ground Speed &#x28;mph&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Transmission Output Speed &#x28;rpm&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Lockup Clutch Current &#x28;&#x25;&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Neutralize Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Direction Switch Position Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Ride Control Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Transmission Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Park Brake Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Down Shift Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Up Shift Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Lockup Clutch Enable Switch Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Torque Converter Speed &#x28;rpm&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Ground Speed and Direction &#x28;kph&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Shift Lever Position Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Actual Gear Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Reverse Steering Solenoid Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Park Brake Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Service Brake Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Auto Retard Mode Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Acceleration Pedal Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Service Brake Oil Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Service Brake Oil Pressure &#x28;kPa&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Hydraulic Oil Temperature &#x28;degC&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Fuel Gauge &#x28;&#x25;&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>System Voltage &#x28;volts&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>864</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDMachineData Insert&#x2f;Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>loaders</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>LHDMachineData</table>
+      <key>
+        <name>OriginationTime</name>
+        <field>OriginationTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>TransmissionTime</name>
+        <field>TransmissionTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>txSequenceNumber</name>
+        <field>txSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggerSequenceNumber</name>
+        <field>loggerSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggedTime</name>
+        <field>loggedTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>CDL Connection Health</name>
+        <field>CDL Connection Health</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Throttle Position &#x28;&#x25;&#x29;</name>
+        <field>Throttle Position &#x28;&#x25;&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Engine Speed &#x28;rpm&#x29;</name>
+        <field>Engine Speed &#x28;rpm&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Desired Engine Speed &#x28;rpm&#x29;</name>
+        <field>Desired Engine Speed &#x28;rpm&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Boost Pressure &#x28;kPa&#x29;</name>
+        <field>Boost Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Engine Load Factor &#x28;&#x25;&#x29;</name>
+        <field>Engine Load Factor &#x28;&#x25;&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Fuel Consumption Rate &#x28;l&#x2f;h&#x29;</name>
+        <field>Fuel Consumption Rate &#x28;l&#x2f;h&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Ground Speed &#x28;mph&#x29;</name>
+        <field>Ground Speed &#x28;mph&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Transmission Output Speed &#x28;rpm&#x29;</name>
+        <field>Transmission Output Speed &#x28;rpm&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Lockup Clutch Current &#x28;&#x25;&#x29;</name>
+        <field>Lockup Clutch Current &#x28;&#x25;&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Neutralize Switch Status</name>
+        <field>Neutralize Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Direction Switch Position Status</name>
+        <field>Direction Switch Position Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Ride Control Switch Status</name>
+        <field>Ride Control Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Transmission Switch Status</name>
+        <field>Transmission Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Park Brake Switch Status</name>
+        <field>Park Brake Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Down Shift Switch Status</name>
+        <field>Down Shift Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Up Shift Switch Status</name>
+        <field>Up Shift Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Lockup Clutch Enable Switch Status</name>
+        <field>Lockup Clutch Enable Switch Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Torque Converter Speed &#x28;rpm&#x29;</name>
+        <field>Torque Converter Speed &#x28;rpm&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Ground Speed and Direction &#x28;kph&#x29;</name>
+        <field>Ground Speed and Direction &#x28;kph&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Shift Lever Position Status</name>
+        <field>Shift Lever Position Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Actual Gear Status</name>
+        <field>Actual Gear Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Reverse Steering Solenoid Status</name>
+        <field>Reverse Steering Solenoid Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Park Brake Status</name>
+        <field>Park Brake Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Service Brake Status</name>
+        <field>Service Brake Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Auto Retard Mode Status</name>
+        <field>Auto Retard Mode Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Acceleration Pedal Status</name>
+        <field>Acceleration Pedal Status</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Service Brake Oil Pressure &#x28;kPa&#x29;</name>
+        <field>Front Service Brake Oil Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Service Brake Oil Pressure &#x28;kPa&#x29;</name>
+        <field>Rear Service Brake Oil Pressure &#x28;kPa&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Hydraulic Oil Temperature &#x28;degC&#x29;</name>
+        <field>Hydraulic Oil Temperature &#x28;degC&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Fuel Gauge &#x28;&#x25;&#x29;</name>
+        <field>Fuel Gauge &#x28;&#x25;&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>System Voltage &#x28;volts&#x29;</name>
+        <field>System Voltage &#x28;volts&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>filename</name>
+        <field>filename</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>OriginationTime</name>
+        <rename>OriginationTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TransmissionTime</name>
+        <rename>TransmissionTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>txSequenceNumber</name>
+        <rename>txSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggerSequenceNumber</name>
+        <rename>loggerSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggedTime</name>
+        <rename>loggedTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>CDL Connection Health</name>
+        <rename>CDL Connection Health</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Throttle Position &#x28;&#x25;&#x29;</name>
+        <rename>Throttle Position &#x28;&#x25;&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Engine Speed &#x28;rpm&#x29;</name>
+        <rename>Engine Speed &#x28;rpm&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Desired Engine Speed &#x28;rpm&#x29;</name>
+        <rename>Desired Engine Speed &#x28;rpm&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Boost Pressure &#x28;kPa&#x29;</name>
+        <rename>Boost Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Engine Load Factor &#x28;&#x25;&#x29;</name>
+        <rename>Engine Load Factor &#x28;&#x25;&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Fuel Consumption Rate &#x28;l&#x2f;h&#x29;</name>
+        <rename>Fuel Consumption Rate &#x28;l&#x2f;h&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Ground Speed &#x28;mph&#x29;</name>
+        <rename>Ground Speed &#x28;mph&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Transmission Output Speed &#x28;rpm&#x29;</name>
+        <rename>Transmission Output Speed &#x28;rpm&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Lockup Clutch Current &#x28;&#x25;&#x29;</name>
+        <rename>Lockup Clutch Current &#x28;&#x25;&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Neutralize Switch Status</name>
+        <rename>Neutralize Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Direction Switch Position Status</name>
+        <rename>Direction Switch Position Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Ride Control Switch Status</name>
+        <rename>Ride Control Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Transmission Switch Status</name>
+        <rename>Transmission Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Park Brake Switch Status</name>
+        <rename>Park Brake Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Down Shift Switch Status</name>
+        <rename>Down Shift Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Up Shift Switch Status</name>
+        <rename>Up Shift Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Lockup Clutch Enable Switch Status</name>
+        <rename>Lockup Clutch Enable Switch Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Torque Converter Speed &#x28;rpm&#x29;</name>
+        <rename>Torque Converter Speed &#x28;rpm&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Ground Speed and Direction &#x28;kph&#x29;</name>
+        <rename>Ground Speed and Direction &#x28;kph&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Shift Lever Position Status</name>
+        <rename>Shift Lever Position Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Actual Gear Status</name>
+        <rename>Actual Gear Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Reverse Steering Solenoid Status</name>
+        <rename>Reverse Steering Solenoid Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Park Brake Status</name>
+        <rename>Park Brake Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Service Brake Status</name>
+        <rename>Service Brake Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Auto Retard Mode Status</name>
+        <rename>Auto Retard Mode Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Acceleration Pedal Status</name>
+        <rename>Acceleration Pedal Status</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Service Brake Oil Pressure &#x28;kPa&#x29;</name>
+        <rename>Front Service Brake Oil Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Service Brake Oil Pressure &#x28;kPa&#x29;</name>
+        <rename>Rear Service Brake Oil Pressure &#x28;kPa&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Hydraulic Oil Temperature &#x28;degC&#x29;</name>
+        <rename>Hydraulic Oil Temperature &#x28;degC&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Fuel Gauge &#x28;&#x25;&#x29;</name>
+        <rename>Fuel Gauge &#x28;&#x25;&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>System Voltage &#x28;volts&#x29;</name>
+        <rename>System Voltage &#x28;volts&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>filename</name>
+        <rename>filename</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>976</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
