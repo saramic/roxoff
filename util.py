@@ -1,11 +1,9 @@
 from datetime import datetime, timedelta
-"""
-based on
-    http://stackoverflow.com/questions/33415475/how-to-get-current-date-and-time-from-gps-unsegment-time-in-python
-""
+#based on
+#    http://stackoverflow.com/questions/33415475/how-to-get-current-date-and-time-from-gps-unsegment-time-in-python
 def leap(date):
     """
-    Return the number of leap seconds since 6/Jan/1980
+    :Return the number of leap seconds since 6/Jan/1980
     :param date: datetime instance
     :return: leap seconds for the date (int)
     """
