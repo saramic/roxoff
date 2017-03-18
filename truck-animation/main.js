@@ -5,7 +5,8 @@ window.onload = function()
 	y = 0;
 	speed = 5;
 	angle = 0;
-	mod = 0;
+	modX = 0;
+	modY = 0;
 	
   cX = canvas.width;
   cY = canvas.height;
@@ -28,8 +29,12 @@ window.onload = function()
   multXY = multY > multX ? multY : multX;
 
   //MinetecLocations
-	canvas = document.getElementById("canvas");
+	canvas = document.getElementById("bg");
 	context = canvas.getContext("2d");
+
+	canvasFg = document.getElementById("canvas");
+	contextFg = canvasFg.getContext("2d");
+
 	loaderImg = new Image();
     loaderImg.src="r1700_cat_sml.png";
 
@@ -46,6 +51,7 @@ window.onload = function()
     MinetecLocations[x]['x'] = fromEasting(MinetecLocations[x]['easting']);
   });
   showLoader(canvas, context);
+	//context.drawImage(map, -100, -300);
 
 	var move = setInterval(function()
 	{
@@ -65,23 +71,24 @@ function showLoader(canvas, context) {
   var beacon2 = getMinetecBeaconCoordinates(nextCoordinates[1] || {});
   var beacon3 = getMinetecBeaconCoordinates(nextCoordinates[2] || {});
   var beacon4 = getMinetecBeaconCoordinates(nextCoordinates[3] || {});
+
   if(invalidBeacon(beacon1) || invalidBeacon(beacon2) || invalidBeacon(beacon3)) {
     return;
   }
 
   context.beginPath();
-  context.arc(beacon1.x, beacon1.y, nextCoordinates[0]['Range (cm?)']*2/100.0, 0, 2 * Math.PI, false);
+  context.arc(beacon1.x, beacon1.y, nextCoordinates[0]['Range (cm?)']/multXY/100.0, 0, 2 * Math.PI, false);
   context.stroke();
   context.closePath();
 
 
   context.beginPath();
-  context.arc(beacon2.x, beacon2.y,nextCoordinates[0]['Range (cm?)']*2/100.0, 0, 2 * Math.PI, false);
+  context.arc(beacon2.x, beacon2.y,nextCoordinates[0]['Range (cm?)']/multXY/100.0, 0, 2 * Math.PI, false);
   context.stroke();
   context.closePath();
 
   context.beginPath();
-  context.arc(beacon3.x, beacon3.y,nextCoordinates[0]['Range (cm?)']*2/100.0, 0, 2 * Math.PI, false);
+  context.arc(beacon3.x, beacon3.y,nextCoordinates[0]['Range (cm?)']/multXY/100.0, 0, 2 * Math.PI, false);
   context.stroke();
   context.closePath();
 
@@ -89,15 +96,19 @@ function showLoader(canvas, context) {
   Trilateration.addBeacon(0, Trilateration.vector(beacon1.x, beacon1.y));
   Trilateration.addBeacon(1, Trilateration.vector(beacon2.x, beacon2.y));
   Trilateration.addBeacon(2, Trilateration.vector(beacon3.x, beacon3.y));
-  Trilateration.setDistance(0, nextCoordinates[0]['Range (cm?)']*2/100.0);
-  Trilateration.setDistance(1, nextCoordinates[1]['Range (cm?)']*2/100.0);
-  Trilateration.setDistance(2, nextCoordinates[2]['Range (cm?)']*2/100.0);
+  //Trilateration.addBeacon(2, Trilateration.vector(beacon4.x, beacon4.y));
+  Trilateration.setDistance(0, nextCoordinates[0]['Range (cm?)']/multXY/100.0);
+  Trilateration.setDistance(1, nextCoordinates[1]['Range (cm?)']/multXY/100.0);
+  Trilateration.setDistance(2, nextCoordinates[2]['Range (cm?)']*multXY/100.0); // TODO why is this reverse?
   var pos = Trilateration.calculatePosition();
+	context.drawImage(loaderImg, pos.x, pos.y);
+  /*
   context.beginPath();
   context.rect(pos.x, pos.y, 10, 10);
   context.fillStyle = 'red';
   context.fill();
   context.closePath();
+  */
 };
 
 function getMinetecBeaconCoordinates(coordinates) {
@@ -124,50 +135,51 @@ function locations(canvas, context) {
     y = fromNorthing(MinetecLocations[tagId]['northing']);
     x = fromEasting(MinetecLocations[tagId]['easting']);
     context.fillText(tagId,x,y+10);
-    console.log(parseInt(x), parseInt(y));
+    //console.log(parseInt(x), parseInt(y));
     dot(context, parseInt(x), parseInt(y), 'black');
   });
 }
 
 function draw()
 {
-	context = canvas.getContext("2d");
+	context = canvasFg.getContext("2d");
 
-	x += (speed*mod) * Math.cos(Math.PI/180 * angle);
-	y += (speed*mod) * Math.sin(Math.PI/180 * angle);
+  context.clearRect(0, 0, 800, 800);
+  //showLoader(canvas, context);
+
+	x += (speed*modX);// * Math.cos(Math.PI/180 * angle);
+	y += (speed*modY);// * Math.sin(Math.PI/180 * angle);
 
 	context.save();
 	context.translate(x, y);
-	context.rotate(Math.PI/180 * angle);
+	//context.rotate(Math.PI/180 * angle);
 	context.drawImage(loaderImg, 100, 100);
-	//context.drawImage(map, -100, -300);
 	context.restore();
 }
 
 function keyup_handler(event)
 {
-	if(event.keyCode == 87 || event.keyCode == 83)
-	{
-		mod = 0;
-	}
+  modX = 0;
+  modY = 0;
 }
 
 function keypress_handler(event)
 {
-	if(event.keyCode == 87)
+  // vi keys
+	if(event.keyCode == 75)
 	{
-		mod = 1;
+		modY = 1;
 	}
-	if(event.keyCode == 83)
+	if(event.keyCode == 73)
 	{
-		mod = -1;
+		modY = -1;
 	}
-	if(event.keyCode == 65)
+	if(event.keyCode == 76)
 	{
-		angle -= 5;
+		modX = 1;
 	}
-	if(event.keyCode == 68)
+	if(event.keyCode == 74)
 	{
-		angle+=5;
+		modX = -1;
 	}
 }
