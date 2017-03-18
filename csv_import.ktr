@@ -11,395 +11,34 @@
     <parameters>
     </parameters>
     <log>
-      <trans-log-table>
-        <connection/>
-        <schema/>
-        <table/>
-        <size_limit_lines/>
-        <interval/>
-        <timeout_days/>
-        <field>
-          <id>ID_BATCH</id>
-          <enabled>Y</enabled>
-          <name>ID_BATCH</name>
-        </field>
-        <field>
-          <id>CHANNEL_ID</id>
-          <enabled>Y</enabled>
-          <name>CHANNEL_ID</name>
-        </field>
-        <field>
-          <id>TRANSNAME</id>
-          <enabled>Y</enabled>
-          <name>TRANSNAME</name>
-        </field>
-        <field>
-          <id>STATUS</id>
-          <enabled>Y</enabled>
-          <name>STATUS</name>
-        </field>
-        <field>
-          <id>LINES_READ</id>
-          <enabled>Y</enabled>
-          <name>LINES_READ</name>
-          <subject/>
-        </field>
-        <field>
-          <id>LINES_WRITTEN</id>
-          <enabled>Y</enabled>
-          <name>LINES_WRITTEN</name>
-          <subject/>
-        </field>
-        <field>
-          <id>LINES_UPDATED</id>
-          <enabled>Y</enabled>
-          <name>LINES_UPDATED</name>
-          <subject/>
-        </field>
-        <field>
-          <id>LINES_INPUT</id>
-          <enabled>Y</enabled>
-          <name>LINES_INPUT</name>
-          <subject/>
-        </field>
-        <field>
-          <id>LINES_OUTPUT</id>
-          <enabled>Y</enabled>
-          <name>LINES_OUTPUT</name>
-          <subject/>
-        </field>
-        <field>
-          <id>LINES_REJECTED</id>
-          <enabled>Y</enabled>
-          <name>LINES_REJECTED</name>
-          <subject/>
-        </field>
-        <field>
-          <id>ERRORS</id>
-          <enabled>Y</enabled>
-          <name>ERRORS</name>
-        </field>
-        <field>
-          <id>STARTDATE</id>
-          <enabled>Y</enabled>
-          <name>STARTDATE</name>
-        </field>
-        <field>
-          <id>ENDDATE</id>
-          <enabled>Y</enabled>
-          <name>ENDDATE</name>
-        </field>
-        <field>
-          <id>LOGDATE</id>
-          <enabled>Y</enabled>
-          <name>LOGDATE</name>
-        </field>
-        <field>
-          <id>DEPDATE</id>
-          <enabled>Y</enabled>
-          <name>DEPDATE</name>
-        </field>
-        <field>
-          <id>REPLAYDATE</id>
-          <enabled>Y</enabled>
-          <name>REPLAYDATE</name>
-        </field>
-        <field>
-          <id>LOG_FIELD</id>
-          <enabled>Y</enabled>
-          <name>LOG_FIELD</name>
-        </field>
-        <field>
-          <id>EXECUTING_SERVER</id>
-          <enabled>N</enabled>
-          <name>EXECUTING_SERVER</name>
-        </field>
-        <field>
-          <id>EXECUTING_USER</id>
-          <enabled>N</enabled>
-          <name>EXECUTING_USER</name>
-        </field>
-        <field>
-          <id>CLIENT</id>
-          <enabled>N</enabled>
-          <name>CLIENT</name>
-        </field>
-      </trans-log-table>
-      <perf-log-table>
-        <connection/>
-        <schema/>
-        <table/>
-        <interval/>
-        <timeout_days/>
-        <field>
-          <id>ID_BATCH</id>
-          <enabled>Y</enabled>
-          <name>ID_BATCH</name>
-        </field>
-        <field>
-          <id>SEQ_NR</id>
-          <enabled>Y</enabled>
-          <name>SEQ_NR</name>
-        </field>
-        <field>
-          <id>LOGDATE</id>
-          <enabled>Y</enabled>
-          <name>LOGDATE</name>
-        </field>
-        <field>
-          <id>TRANSNAME</id>
-          <enabled>Y</enabled>
-          <name>TRANSNAME</name>
-        </field>
-        <field>
-          <id>STEPNAME</id>
-          <enabled>Y</enabled>
-          <name>STEPNAME</name>
-        </field>
-        <field>
-          <id>STEP_COPY</id>
-          <enabled>Y</enabled>
-          <name>STEP_COPY</name>
-        </field>
-        <field>
-          <id>LINES_READ</id>
-          <enabled>Y</enabled>
-          <name>LINES_READ</name>
-        </field>
-        <field>
-          <id>LINES_WRITTEN</id>
-          <enabled>Y</enabled>
-          <name>LINES_WRITTEN</name>
-        </field>
-        <field>
-          <id>LINES_UPDATED</id>
-          <enabled>Y</enabled>
-          <name>LINES_UPDATED</name>
-        </field>
-        <field>
-          <id>LINES_INPUT</id>
-          <enabled>Y</enabled>
-          <name>LINES_INPUT</name>
-        </field>
-        <field>
-          <id>LINES_OUTPUT</id>
-          <enabled>Y</enabled>
-          <name>LINES_OUTPUT</name>
-        </field>
-        <field>
-          <id>LINES_REJECTED</id>
-          <enabled>Y</enabled>
-          <name>LINES_REJECTED</name>
-        </field>
-        <field>
-          <id>ERRORS</id>
-          <enabled>Y</enabled>
-          <name>ERRORS</name>
-        </field>
-        <field>
-          <id>INPUT_BUFFER_ROWS</id>
-          <enabled>Y</enabled>
-          <name>INPUT_BUFFER_ROWS</name>
-        </field>
-        <field>
-          <id>OUTPUT_BUFFER_ROWS</id>
-          <enabled>Y</enabled>
-          <name>OUTPUT_BUFFER_ROWS</name>
-        </field>
-      </perf-log-table>
-      <channel-log-table>
-        <connection/>
-        <schema/>
-        <table/>
-        <timeout_days/>
-        <field>
-          <id>ID_BATCH</id>
-          <enabled>Y</enabled>
-          <name>ID_BATCH</name>
-        </field>
-        <field>
-          <id>CHANNEL_ID</id>
-          <enabled>Y</enabled>
-          <name>CHANNEL_ID</name>
-        </field>
-        <field>
-          <id>LOG_DATE</id>
-          <enabled>Y</enabled>
-          <name>LOG_DATE</name>
-        </field>
-        <field>
-          <id>LOGGING_OBJECT_TYPE</id>
-          <enabled>Y</enabled>
-          <name>LOGGING_OBJECT_TYPE</name>
-        </field>
-        <field>
-          <id>OBJECT_NAME</id>
-          <enabled>Y</enabled>
-          <name>OBJECT_NAME</name>
-        </field>
-        <field>
-          <id>OBJECT_COPY</id>
-          <enabled>Y</enabled>
-          <name>OBJECT_COPY</name>
-        </field>
-        <field>
-          <id>REPOSITORY_DIRECTORY</id>
-          <enabled>Y</enabled>
-          <name>REPOSITORY_DIRECTORY</name>
-        </field>
-        <field>
-          <id>FILENAME</id>
-          <enabled>Y</enabled>
-          <name>FILENAME</name>
-        </field>
-        <field>
-          <id>OBJECT_ID</id>
-          <enabled>Y</enabled>
-          <name>OBJECT_ID</name>
-        </field>
-        <field>
-          <id>OBJECT_REVISION</id>
-          <enabled>Y</enabled>
-          <name>OBJECT_REVISION</name>
-        </field>
-        <field>
-          <id>PARENT_CHANNEL_ID</id>
-          <enabled>Y</enabled>
-          <name>PARENT_CHANNEL_ID</name>
-        </field>
-        <field>
-          <id>ROOT_CHANNEL_ID</id>
-          <enabled>Y</enabled>
-          <name>ROOT_CHANNEL_ID</name>
-        </field>
-      </channel-log-table>
-      <step-log-table>
-        <connection/>
-        <schema/>
-        <table/>
-        <timeout_days/>
-        <field>
-          <id>ID_BATCH</id>
-          <enabled>Y</enabled>
-          <name>ID_BATCH</name>
-        </field>
-        <field>
-          <id>CHANNEL_ID</id>
-          <enabled>Y</enabled>
-          <name>CHANNEL_ID</name>
-        </field>
-        <field>
-          <id>LOG_DATE</id>
-          <enabled>Y</enabled>
-          <name>LOG_DATE</name>
-        </field>
-        <field>
-          <id>TRANSNAME</id>
-          <enabled>Y</enabled>
-          <name>TRANSNAME</name>
-        </field>
-        <field>
-          <id>STEPNAME</id>
-          <enabled>Y</enabled>
-          <name>STEPNAME</name>
-        </field>
-        <field>
-          <id>STEP_COPY</id>
-          <enabled>Y</enabled>
-          <name>STEP_COPY</name>
-        </field>
-        <field>
-          <id>LINES_READ</id>
-          <enabled>Y</enabled>
-          <name>LINES_READ</name>
-        </field>
-        <field>
-          <id>LINES_WRITTEN</id>
-          <enabled>Y</enabled>
-          <name>LINES_WRITTEN</name>
-        </field>
-        <field>
-          <id>LINES_UPDATED</id>
-          <enabled>Y</enabled>
-          <name>LINES_UPDATED</name>
-        </field>
-        <field>
-          <id>LINES_INPUT</id>
-          <enabled>Y</enabled>
-          <name>LINES_INPUT</name>
-        </field>
-        <field>
-          <id>LINES_OUTPUT</id>
-          <enabled>Y</enabled>
-          <name>LINES_OUTPUT</name>
-        </field>
-        <field>
-          <id>LINES_REJECTED</id>
-          <enabled>Y</enabled>
-          <name>LINES_REJECTED</name>
-        </field>
-        <field>
-          <id>ERRORS</id>
-          <enabled>Y</enabled>
-          <name>ERRORS</name>
-        </field>
-        <field>
-          <id>LOG_FIELD</id>
-          <enabled>N</enabled>
-          <name>LOG_FIELD</name>
-        </field>
-      </step-log-table>
-      <metrics-log-table>
-        <connection/>
-        <schema/>
-        <table/>
-        <timeout_days/>
-        <field>
-          <id>ID_BATCH</id>
-          <enabled>Y</enabled>
-          <name>ID_BATCH</name>
-        </field>
-        <field>
-          <id>CHANNEL_ID</id>
-          <enabled>Y</enabled>
-          <name>CHANNEL_ID</name>
-        </field>
-        <field>
-          <id>LOG_DATE</id>
-          <enabled>Y</enabled>
-          <name>LOG_DATE</name>
-        </field>
-        <field>
-          <id>METRICS_DATE</id>
-          <enabled>Y</enabled>
-          <name>METRICS_DATE</name>
-        </field>
-        <field>
-          <id>METRICS_CODE</id>
-          <enabled>Y</enabled>
-          <name>METRICS_CODE</name>
-        </field>
-        <field>
-          <id>METRICS_DESCRIPTION</id>
-          <enabled>Y</enabled>
-          <name>METRICS_DESCRIPTION</name>
-        </field>
-        <field>
-          <id>METRICS_SUBJECT</id>
-          <enabled>Y</enabled>
-          <name>METRICS_SUBJECT</name>
-        </field>
-        <field>
-          <id>METRICS_TYPE</id>
-          <enabled>Y</enabled>
-          <name>METRICS_TYPE</name>
-        </field>
-        <field>
-          <id>METRICS_VALUE</id>
-          <enabled>Y</enabled>
-          <name>METRICS_VALUE</name>
-        </field>
-      </metrics-log-table>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -427,10 +66,10 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
-    <created_user>-</created_user>
-    <created_date>2017&#x2f;03&#x2f;17 23&#x3a;40&#x3a;25.421</created_date>
-    <modified_user>-</modified_user>
-    <modified_date>2017&#x2f;03&#x2f;17 23&#x3a;40&#x3a;25.421</modified_date>
+  <created_user>-</created_user>
+  <created_date>2017&#x2f;03&#x2f;17 23&#x3a;40&#x3a;25.421</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2017&#x2f;03&#x2f;17 23&#x3a;40&#x3a;25.421</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -464,28 +103,110 @@
     </attributes>
   </connection>
   <order>
-    <hop>
-      <from>Get File Names</from>
-      <to>CSV file input</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV file input</from>
-      <to>Insert &#x2f; Update</to>
-      <enabled>Y</enabled>
-    </hop>
+  <hop> <from>GET LHDBucketData</from><to>LHDBucketData CSV INPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>LHDBucketData CSV INPUT</from><to>LHDBucketData SQL INPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>LHDIMUData</from><to>LHDIMUData Insert&#x2f;Update</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get  LHDIMUData csvs</from><to>LHDIMUData</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>CSV file input</name>
+    <name>GET LHDBucketData</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum>N</rownum>
+    <isaddresult>Y</isaddresult>
+    <filefield>N</filefield>
+    <rownum_field/>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016</name>
+      <filemask>.&#x2a;LHDBucketData.&#x2a;</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>Y</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>48</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get  LHDIMUData csvs</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filter>
+      <filterfiletype>all_files</filterfiletype>
+    </filter>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum>N</rownum>
+    <isaddresult>Y</isaddresult>
+    <filefield>N</filefield>
+    <rownum_field/>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;</name>
+      <filemask>.&#x2a;LHDIMUData.&#x2a;</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>Y</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDBucketData CSV INPUT</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
     <filename>&#x2f;Users&#x2f;michaelmilewski&#x2f;Documents&#x2f;data&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016&#x2f;2016.11.11&#x2f;RCM00001&#x2f;16.36.06_Complete_Log&#x2f;LHDBucketData1162881383.csv</filename>
     <filename_field>filename</filename_field>
     <rownum_field/>
@@ -600,31 +321,25 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>176</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
-    </GUI>
+      </GUI>
     </step>
 
   <step>
-    <name>Insert &#x2f; Update</name>
+    <name>LHDBucketData SQL INPUT</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
     <connection>loaders</connection>
     <commit>100</commit>
     <update_bypassed>N</update_bypassed>
@@ -742,68 +457,1079 @@
         <update>Y</update>
       </value>
     </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>288</yloc>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>336</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
-    </GUI>
+      </GUI>
     </step>
 
   <step>
-    <name>Get File Names</name>
-    <type>GetFileNames</type>
+    <name>LHDIMUData</name>
+    <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <filter>
-      <filterfiletype>all_files</filterfiletype>
-    </filter>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <rownum>N</rownum>
-    <isaddresult>Y</isaddresult>
-    <filefield>N</filefield>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#x2f;Users&#x2f;guilermecampos&#x2f;Projects&#x2f;hackaton&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016&#x2f;2016.11.11&#x2f;RCM00001&#x2f;16.36.06_Complete_Log&#x2f;LHDIMUData1162881383.csv</filename>
+    <filename_field>filename</filename_field>
     <rownum_field/>
-    <filename_Field/>
-    <wildcard_Field/>
-    <exclude_wildcard_Field/>
-    <dynamic_include_subfolders>N</dynamic_include_subfolders>
-    <limit>0</limit>
-    <file>
-      <name>&#x2f;Users&#x2f;michaelmilewski&#x2f;Documents&#x2f;data&#x2f;Cadia underground loaders&#x2f;Vehicle data&#x2f;November2016</name>
-      <filemask>.&#x2a;LHDBucketData.&#x2a;</filemask>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>Y</include_subfolders>
-    </file>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
-      <yloc>32</yloc>
+    <include_filename>Y</include_filename>
+    <separator>,</separator>
+    <enclosure>&#x22;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>OriginationTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>TransmissionTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>txSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggerSequenceNumber</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>loggedTime</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>FrontIMUSensorHealth</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Pitch Angle &#x28;deg&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Roll Angle &#x28;deg&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Angle Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Angle Latency &#x28;ms&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Rotation Rate Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Rotation Rate Latency &#x28;ms&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Acceleration Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front High Accuracy Acceleration Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front X High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front Y High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Front H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear IMU Sensor Health</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Pitch Angle &#x28;deg&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Roll Angle &#x28;deg&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Angle Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Angle Latency &#x28;ms&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Rotation Rate Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Rotation Rate Latency &#x28;ms&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Acceleration Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear High Accuracy Acceleration Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear X High Acc Tmp Compensated Acc &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear Y High Acc Tmp Compensated Acc  &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rear H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>480</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
-    </GUI>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LHDIMUData Insert&#x2f;Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>loaders</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>LHDIMUData</table>
+      <key>
+        <name>OriginationTime</name>
+        <field>OriginationTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>TransmissionTime</name>
+        <field>TransmissionTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>txSequenceNumber</name>
+        <field>txSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggerSequenceNumber</name>
+        <field>loggerSequenceNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>loggedTime</name>
+        <field>loggedTime</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>FrontIMUSensorHealth</name>
+        <field>FrontIMUSensorHealth</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Pitch Angle &#x28;deg&#x29;</name>
+        <field>Front Pitch Angle &#x28;deg&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Roll Angle &#x28;deg&#x29;</name>
+        <field>Front Roll Angle &#x28;deg&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Angle Quality &#x28;compressed&#x29;</name>
+        <field>Front Angle Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Angle Latency &#x28;ms&#x29;</name>
+        <field>Front Angle Latency &#x28;ms&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <field>Front Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <field>Front Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <field>Front Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Rotation Rate Quality &#x28;compressed&#x29;</name>
+        <field>Front Rotation Rate Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Rotation Rate Latency &#x28;ms&#x29;</name>
+        <field>Front Rotation Rate Latency &#x28;ms&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Acceleration Quality &#x28;compressed&#x29;</name>
+        <field>Front Acceleration Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front High Accuracy Acceleration Quality &#x28;compressed&#x29;</name>
+        <field>Front High Accuracy Acceleration Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front X High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front X High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front Y High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Front Y High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Front H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</name>
+        <field>Front H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear IMU Sensor Health</name>
+        <field>Rear IMU Sensor Health</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Pitch Angle &#x28;deg&#x29;</name>
+        <field>Rear Pitch Angle &#x28;deg&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Roll Angle &#x28;deg&#x29;</name>
+        <field>Rear Roll Angle &#x28;deg&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Angle Quality &#x28;compressed&#x29;</name>
+        <field>Rear Angle Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Angle Latency &#x28;ms&#x29;</name>
+        <field>Rear Angle Latency &#x28;ms&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <field>Rear Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <field>Rear Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <field>Rear Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Rotation Rate Quality &#x28;compressed&#x29;</name>
+        <field>Rear Rotation Rate Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Rotation Rate Latency &#x28;ms&#x29;</name>
+        <field>Rear Rotation Rate Latency &#x28;ms&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Acceleration Quality &#x28;compressed&#x29;</name>
+        <field>Rear Acceleration Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear High Accuracy Acceleration Quality &#x28;compressed&#x29;</name>
+        <field>Rear High Accuracy Acceleration Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear X High Acc Tmp Compensated Acc &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear X High Acc Tmp Compensated Acc &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear Y High Acc Tmp Compensated Acc  &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <field>Rear Y High Acc Tmp Compensated Acc  &#x28;m&#x2f;s&#x2f;s&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>Rear H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</name>
+        <field>Rear H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>filename</name>
+        <field>filename</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>OriginationTime</name>
+        <rename>OriginationTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TransmissionTime</name>
+        <rename>TransmissionTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>txSequenceNumber</name>
+        <rename>txSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggerSequenceNumber</name>
+        <rename>loggerSequenceNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>loggedTime</name>
+        <rename>loggedTime</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>FrontIMUSensorHealth</name>
+        <rename>FrontIMUSensorHealth</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Pitch Angle &#x28;deg&#x29;</name>
+        <rename>Front Pitch Angle &#x28;deg&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Roll Angle &#x28;deg&#x29;</name>
+        <rename>Front Roll Angle &#x28;deg&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Angle Quality &#x28;compressed&#x29;</name>
+        <rename>Front Angle Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Angle Latency &#x28;ms&#x29;</name>
+        <rename>Front Angle Latency &#x28;ms&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <rename>Front Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <rename>Front Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <rename>Front Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Rotation Rate Quality &#x28;compressed&#x29;</name>
+        <rename>Front Rotation Rate Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Rotation Rate Latency &#x28;ms&#x29;</name>
+        <rename>Front Rotation Rate Latency &#x28;ms&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Acceleration Quality &#x28;compressed&#x29;</name>
+        <rename>Front Acceleration Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front High Accuracy Acceleration Quality &#x28;compressed&#x29;</name>
+        <rename>Front High Accuracy Acceleration Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front X High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front X High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front Y High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Front Y High Accuracy Temp Compensated Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Front H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</name>
+        <rename>Front H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear IMU Sensor Health</name>
+        <rename>Rear IMU Sensor Health</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Pitch Angle &#x28;deg&#x29;</name>
+        <rename>Rear Pitch Angle &#x28;deg&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Roll Angle &#x28;deg&#x29;</name>
+        <rename>Rear Roll Angle &#x28;deg&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Angle Quality &#x28;compressed&#x29;</name>
+        <rename>Rear Angle Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Angle Latency &#x28;ms&#x29;</name>
+        <rename>Rear Angle Latency &#x28;ms&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <rename>Rear Pitch Rotation Rate &#x28;deg&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <rename>Rear Roll Rotation Rate &#x28;deg&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</name>
+        <rename>Rear Yaw Rotation Rate &#x28;deg&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Rotation Rate Quality &#x28;compressed&#x29;</name>
+        <rename>Rear Rotation Rate Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Rotation Rate Latency &#x28;ms&#x29;</name>
+        <rename>Rear Rotation Rate Latency &#x28;ms&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear X Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear Y Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear Z Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Acceleration Quality &#x28;compressed&#x29;</name>
+        <rename>Rear Acceleration Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear X High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear Y High Accuracy Acceleration &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear High Accuracy Acceleration Quality &#x28;compressed&#x29;</name>
+        <rename>Rear High Accuracy Acceleration Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear X High Acc Tmp Compensated Acc &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear X High Acc Tmp Compensated Acc &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear Y High Acc Tmp Compensated Acc  &#x28;m&#x2f;s&#x2f;s&#x29;</name>
+        <rename>Rear Y High Acc Tmp Compensated Acc  &#x28;m&#x2f;s&#x2f;s&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Rear H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</name>
+        <rename>Rear H Acc Tmp Compensated Acc Quality &#x28;compressed&#x29;</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>filename</name>
+        <rename>filename</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>560</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+      </GUI>
     </step>
 
   <step_error_handling>
   </step_error_handling>
-  <slave-step-copy-partition-distribution>
-  </slave-step-copy-partition-distribution>
-  <slave_transformation>N</slave_transformation>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
 </transformation>
