@@ -1,3 +1,4 @@
+var minX, minY, multXY;
 window.onload = function()
 {
 	x = 0;
@@ -6,6 +7,27 @@ window.onload = function()
 	angle = 0;
 	mod = 0;
 	
+  cX = canvas.width;
+  cY = canvas.height;
+  northings = _.remove(_.map(_.keys(MinetecLocations), function(x) {
+    return parseInt(MinetecLocations[x]['northing'])
+  }), function(x) {
+    return x !== 0
+  });
+  eastings = _.remove(_.map(_.keys(MinetecLocations), function(x) {
+    return parseInt(MinetecLocations[x]['easting'])
+  }), function(x) {
+    return x !== 0
+  });
+  minY = Math.min.apply(null, northings);
+  maxY = Math.max.apply(null, northings);
+  minX = Math.min.apply(null, eastings);
+  maxX = Math.max.apply(null, eastings);
+  multY = parseFloat(maxY - minY)/parseFloat(cY);
+  multX = parseFloat(maxX - minX)/parseFloat(cX);
+  multXY = multY > multX ? multY : multX;
+
+  //MinetecLocations
 	canvas = document.getElementById("canvas");
 	context = canvas.getContext("2d");
 	car = new Image();
@@ -27,13 +49,17 @@ function dot(context, x, y) {
            context.fill();
 }
 
+
+function fromEasting(easting) {
+    return (easting - minX)/multXY;
+}
+function fromNorthing(northing) {
+    return (northing - minY)/multXY;
+}
 function locations(canvas, context) {
-  canvas.width
-  canvas.height
-  //MinetecLocations
   Object.keys(MinetecLocations).forEach(function(x) {
-    y = (MinetecLocations[x]['Northing'] - 21000)/1;
-    x = (MinetecLocations[x]['Easting'] - 15000)/1;
+    y = fromNorthing(MinetecLocations[x]['northing']);
+    x = fromEasting(MinetecLocations[x]['easting']);
     console.log(parseInt(x), parseInt(y));
     dot(context, parseInt(x), parseInt(y));
   });
