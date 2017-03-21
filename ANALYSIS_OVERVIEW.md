@@ -8,7 +8,21 @@ still looking at
 
 * http://wavedatalab.github.io/datawithpython/munge.html
 * http://machinelearningmastery.com/quick-and-dirty-data-analysis-with-pandas/
-* time series http://earthpy.org/pandas-basics.html
+* time series
+  * http://earthpy.org/pandas-basics.html
+  * https://plot.ly/pandas/time-series/
+  * https://chrisalbon.com/python/pandas_time_series_basics.html
+  * https://blog.mafr.de/2012/03/11/time-series-data-with-matplotlib/
+  * http://stackoverflow.com/questions/26845727/pandas-plot-multiple-columns-of-a-timeseries-with-labels-example-from-pandas-d
+* more plotting
+  * https://datasciencelab.wordpress.com/2013/12/21/beautiful-plots-with-pandas-and-matplotlib/
+* determine columns changes
+  * http://stackoverflow.com/questions/30196063/determining-when-a-column-value-changes-in-pandas-dataframe
+  * http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.diff.html
+  * http://stackoverflow.com/questions/20648346/computing-diffs-within-groups-of-a-dataframe
+  * http://stackoverflow.com/questions/31551099/pandas-difference-in-index-with-date-values
+* time between indicies
+  * http://stackoverflow.com/questions/16777570/calculate-time-difference-between-pandas-dataframe-indices
 
 ## Techniques
 
@@ -20,6 +34,13 @@ Jupyter Notebook
 * interactive widges?
 * spark integration
 * tensorflow 
+
+Better graphs
+* animated graphs - http://stackoverflow.com/questions/11611705/animated-graphs-in-ipython-notebook
+* interactive - https://medium.com/@captain_eli/3-ways-to-make-interactive-graphs-in-jupyter-notebooks-154cbb4796a9#.69us421cg
+* time line graph - http://stackoverflow.com/questions/37512137/python-vincent-jupyter-notebook-time-line-graph
+* matplot lib animations - http://jakevdp.github.io/blog/2013/05/12/embedding-matplotlib-animations/
+* time series in plotly - https://plot.ly/python/time-series/
 
 Presentaion JS
 look at 2D canvas drawing
