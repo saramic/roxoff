@@ -4,7 +4,7 @@ Rox on, Rox off - the Adaptive Driver Performance Training for bogger drivers
 in Newcrest Cadia mines. A repo of our analysis of Bogger (loader) data and how
 to improve efficiency.
 
-![loader animation](./mine.gif)
+![loader animation](./images/mine.gif)
 
 The full presentation (with animated gifs) is on [Google
 Drive](https://docs.google.com/presentation/d/1t8xp-ZhLitig8ZFk0dklbqFQOs10YW87eYzybUEqRdM/edit?usp=sharing)
