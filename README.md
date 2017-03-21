@@ -6,40 +6,15 @@ to improve efficiency.
 
 ![loader animation](./mine.gif)
 
+The full presentation (with animated gifs) is on [Google
+Drive](https://docs.google.com/presentation/d/1t8xp-ZhLitig8ZFk0dklbqFQOs10YW87eYzybUEqRdM/edit?usp=sharing)
+
+A static version is available from this repository as pdf [RoxOff.pdf](./RoxOff.pdf)
+
+## What next
+
 Now that the competition is over I want to consolidate my learnings in a set of
 techniques and technologies. Ultimately I want this to become a review of what
-we did and a getting started point on the next data based hackathon.
+we did and a getting started point on the next data based hackathon. I will
+update [ANALYSIS_OVERVIEW.md](./ANALYSIS_OVERVIEW.md)
 
-## Prelim Analysis
-
-The logical way to get to know the data both as the real analysis and demo of
-the techniques used in the analysis using [Jupyter
-notebooks](http://jupyter.org/)
-
-## Techniques
-
-Todo
-Jupyter Notebook
-* notebook
-* field count_values analysis
-* time series analysis
-* interactive widges?
-* spark integration
-* tensorflow 
-
-Presentaion JS
-look at 2D canvas drawing
-* https://greensock.com/
-* https://two.js.org/
-* http://www.createjs.com/easeljs
-* https://konvajs.github.io/
-* http://paperjs.org/
-* http://ocanvas.org/
-* http://fabricjs.com/
-* https://ihatetomatoes.net/guide-to-html5-canvas-javascript-libraries/
-
-Trilateration
-* JS real time
-* Python (similar) draw position out
-
-Find a spead up time graph series display??
