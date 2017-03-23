@@ -15,7 +15,7 @@ A static version is available from this repository as pdf [RoxOff.pdf](./RoxOff.
 
 This is still work in progress.
 
-![Bogger Final Findings](./final_findings/bogger_findings.ipynb)
+[Bogger Final Findings](./final_findings/bogger_findings.ipynb)
 
 ## What next
 
