@@ -11,6 +11,12 @@ Drive](https://docs.google.com/presentation/d/1t8xp-ZhLitig8ZFk0dklbqFQOs10YW87e
 
 A static version is available from this repository as pdf [RoxOff.pdf](./RoxOff.pdf)
 
+## Final findings
+
+This is still work in progress.
+
+![Bogger Final Findings](./final_findings/Bogger Findings.ipynb)
+
 ## What next
 
 Now that the competition is over I want to consolidate my learnings in a set of
